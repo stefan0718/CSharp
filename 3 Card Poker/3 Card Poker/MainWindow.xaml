@@ -1,0 +1,18 @@
+﻿<Window x:Class="_3_Card_Poker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3_Card_Poker"
+        mc:Ignorable="d"
+        Background="Ivory"
+        SizeToContent="WidthAndHeight"
+        MouseDown="windowMouseDown"
+        Title="3 Card Poker" Height="600" Width="800">
+    <Grid>
+        <Label x:Name="l_name" Background="White" Content="Input your name" Height="100" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="40" FontWeight="Bold" Foreground="DarkGray"/>
+        <TextBox x:Name="tb_name" Background="Transparent" Height="100" Width="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" MaxLength="25" TextAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="40" FontWeight="Bold" BorderBrush="SaddleBrown" CaretBrush="Brown" BorderThickness="5" GotKeyboardFocus="tb_name_GotKeyboardFocus" LostKeyboardFocus="tb_name_LostKeyboardFocus"/>
+        <Button x:Name="b_start" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="70" Margin="447,363,0,0" BorderBrush="{x:Null}" BorderThickness="0" FontSize="30" FontWeight="Bold" Foreground="#FF484848" IsEnabled="{Binding ElementName=tb_name, Path=Text.Length}" Click="b_start_Click"/>
+        <Frame x:Name="frame" Height="600" Width="800" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
